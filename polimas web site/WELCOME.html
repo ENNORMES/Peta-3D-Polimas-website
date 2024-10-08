@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-image: url('images/doodle-art.png'); /* Path to the doodle art */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            color: #ff6f61;
+            font-size: 3em;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        button {
+            padding: 15px 25px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff4757;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Welcome, <span id="user"></span>!</h1>
+        <p>Let's help you get started.</p>
+        <button onclick="location.href='peta.html'">Peta POLIMAS 3D</button>
+    </div>
+
+    <script>
+        document.getElementById('user').innerText = localStorage.getItem('username');
+    </script>
+</body>
+</html>
